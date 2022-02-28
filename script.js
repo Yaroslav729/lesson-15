@@ -1,6 +1,5 @@
 "use strict";
 
-let div = new DomElement('.block')
 let text = prompt('Введите текст')
 
 function DomElement(selector, height, width, bg, fontSize) {
@@ -24,15 +23,15 @@ function DomElement(selector, height, width, bg, fontSize) {
         }
         if (element) {
             element.innerHTML = text
+            element.style.cssText = `font-size: 30px;
+                                    width: 300px;
+                                    height: 300px;
+                                    background: blue;`
             document.body.append(element)
         }
 
     }
-
-    this.conveyStr = function () {
-
-    }
 }
 
+let div = new DomElement('.block')
 div.renderElement()
-
